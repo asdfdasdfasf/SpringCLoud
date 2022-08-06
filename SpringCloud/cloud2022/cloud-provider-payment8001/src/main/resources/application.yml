@@ -1,0 +1,47 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: cloud-payment-service  # 设置当前的应用名称
+  datasource:
+    url: jdbc:mysql://localhost:3306/springcloud?Unicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 252525
+    type: com.alibaba.druid.pool.DruidDataSource # 当前数据源操作类型
+    driver-class-name: com.mysql.jdbc.Driver # 指定数据库的驱动
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+  #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+
+# 指定mybatis的mapper文件位置，以及所有别名类所在的包
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: com.kyrie.study.domain
+##配置eureka的相关配置
+eureka:
+  client:
+    register-with-eureka: true # 表示是否将自己注册到注册中心
+    # 是否从EurekaServer抓取已有的注册信息，默认是true。单节点无所谓，集群必须设置为true，
+    # 才能配合Ribbon使用负载均衡
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+      # 注册中心的地址路径
+#      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: payment8001
+    prefer-ip-address: true # 访问路径可以显示IP地址

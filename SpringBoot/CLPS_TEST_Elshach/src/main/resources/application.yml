@@ -1,0 +1,47 @@
+
+server:
+  # \u8BBE\u7F6E\u9879\u76EE\u542F\u52A8\u7684\u7AEF\u53E3\u53F7
+  port: 8080
+  # \u8BBE\u7F6E\u9879\u76EE\u7684\u8BBF\u95EE\u8DEF\u5F84\uFF08\u4E0A\u4E0B\u6587\u8DEF\u5F84\uFF09
+  servlet:
+    context-path: /mybatis
+
+## \u6570\u636E\u6E90\u914D\u7F6E
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: 252525
+  main:
+    allow-circular-references: true
+
+## mybatis \u914D\u7F6E
+mybatis:
+  mapper-locations: classpath:/mappers/*.xml
+  type-aliases-package: com.example.pojo
+  ##resultType="User"
+  ##resultType="com.xxx.springboot.po.User"
+  configuration:
+    ## \u4E0B\u5212\u7EBF\u8F6C\u9A7C\u5CF0\u914D\u7F6E
+    map-underscore-to-camel-case: true
+
+## mybatis\u9ED8\u8BA4\u662F\u5C5E\u6027\u540D\u548C\u6570\u636E\u5E93\u5B57\u6BB5\u540D\u4E00\u4E00\u5BF9\u5E94\u7684
+## \u5373\u6570\u636E\u5E93\u8868\u5217\uFF1Auser_name
+## \u5B9E\u4F53\u7C7B\u5C5E\u6027\uFF1Auser_name
+
+## \u4F46\u662Fjava\u4E2D\u4E00\u822C\u4F7F\u7528\u9A7C\u5CF0\u547D\u540D
+## \u6570\u636E\u5E93\u8868\u5217\uFF1Auser_name
+## \u5B9E\u4F53\u7C7B\u5C5E\u6027\uFF1AuserName
+
+## pageHelper
+pagehelper:
+  helper-dialect: mysql
+
+## \u663E\u793Adao \u6267\u884Csql\u8BED\u53E5
+logging:
+  level:
+    com:
+      xxx:
+        springboot:
+          dao: debug

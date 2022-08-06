@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /boot
+person:
+  age: 98
+  list:
+    - 1
+    - 2
+    - 3
+    - 4
+  name: kyrie
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: 252525
+    username: root
+    url: jdbc:mysql://localhost:3306/mybatistest

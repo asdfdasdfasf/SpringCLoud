@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1 v-bind:title="mgs">fight will</h1>
+        <input type="text" v-bind:value="searchMap.name">
+        <input type="text" v-model:value="searchMap.name">
+        {{searchMap.name}}
+        <button @click="getName()">按钮事件</button>
+    </div>
+    <script src="vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                mgs:"hello vue info",
+                searchMap:{
+                    name:"Lucy"
+                }
+
+            },
+            methods:{
+                getName(){
+                    console.log("my name")
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

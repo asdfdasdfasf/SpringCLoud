@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kyrie.study.mapper.HotProductMapper">
+
+    <!--根据城市查询最热商品信息-->
+    <select id="selectProductByCity" resultType="com.kyrie.study.pojo.Product">
+        select p.id,title,link,img
+        from lzj_product p
+        where city=#{city} and rent_type is null
+        order by sale_count
+        limit 0,#{limitNum}
+    </select>
+    <select id="selectProductByOtherCity" resultType="com.kyrie.study.pojo.Product">
+        select p.id,title,link,img
+        from lzj_product p
+        where city!=#{city} and rent_type is null
+        order by sale_count
+        limit 0,#{limitNum}
+    </select>
+
+
+</mapper>

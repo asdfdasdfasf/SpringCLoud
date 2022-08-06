@@ -1,0 +1,23 @@
+{
+    "code":"200",
+    "status":"响应成功",
+    "data":{
+        "items":[
+            {
+                "username":"Lucy",
+                "age":18,
+                "address":"USA"
+            },
+            {
+                "username":"Lucy1",
+                "age":19,
+                "address":"USA1"
+            },
+            {
+                "username":"Lucy2",
+                "age":20,
+                "address":"USA2"
+            }
+        ]
+    }
+}

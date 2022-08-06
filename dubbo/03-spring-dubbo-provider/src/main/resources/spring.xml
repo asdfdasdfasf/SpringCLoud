@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!--        通过读取配置文件来配置连接数据库的参数-->
+    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+    <!--    声明数据源DataSource，作用是连接数据库的 创建DruidDataSource对象，然后为url等赋值，用于连接数据库-->
+    <bean id="mydataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <!--        通过set注入的方式给url，username，password赋值-->
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.name}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+    <!--    声明mybatis中提供的SqlSessionFactoryBean类，这个类的内部创建SqlSessionFactory类
+    -->
+    <!--        读取了这个文件的时候，spring容器就会创建好sqlSessionFactory对象了-->
+    <!--    我们现在获得了SqlSessionFactory对象，但是原来的对象是读取了主配置文件后创建的，因为主配置文件里面有DataSource，所以我们也需要将DataSource注入-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--        set注入，吧数据库连接池付给dataSource属性-->
+        <property name="dataSource" ref="mydataSource"/>
+        <!--        还需要读取mybatis主配置文件
+                    configLocation属性是Resource类型，读取配置文件
+                    它的赋值，使用value，指定文件的路径，使用classpath:表示文件的位置
+        -->
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+    </bean>
+    <!--     创建dao对象，使用sqlSession的getMapper(StudentDao.class);
+             MapperScannerConfigurer在内部调用getMapper生成每个dao接口的代理对象，创建代理对象的话需要知道是哪个接口
+             所以我们需要将接口的路径传入，内部实际上是调用的SqlSessionFactory的getMapper方法，所以还需要提供sqlSessionFactory对象
+    -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--        指定sqlSessionFactory对象的id-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!--        指定包名，dao接口所在的包，MapperScannerConfigurer会扫描这个包中的所有接口，把每个接口都执行一次getMapper方法，得到每个接口的dao对象
+                    创建好的dao对象放入到spring的容器中的。如果有多个包使用逗号分隔
+                    dao对象的默认名称是接口首字母小写。
+        -->
+        <property name="basePackage" value="com.kyrie.study.mapper"/>
+    </bean>
+    <context:component-scan base-package="com.kyrie.study"/>
+    <mvc:annotation-driven/>
+
+    <!--dubbo的相关配置-->
+    <dubbo:application name="03-spring-dubbo-provider"/>
+    <dubbo:registry address="zookeeper://localhost:2181"/>
+    <dubbo:protocol name="dubbo" port="20888"/>
+    <dubbo:service interface="com.kyrie.study.service.GoodsService" ref="goodsServiceImp"/>
+</beans>

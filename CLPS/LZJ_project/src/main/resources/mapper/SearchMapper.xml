@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kyrie.study.mapper.SearchMapper">
+    <select id="searchProductByCondition" resultType="com.kyrie.study.pojo.Product">
+        select id,title,house_type houseType,price,rent_type rentType,img
+        from lzj_product
+        <where >
+            <if test="content!='' and content !=null and content!='undefined'">
+                title like '%${content}%' or
+                house_type like '%${content}%' or
+                rent_type like '%${content}%'
+            </if>
+            and city=#{city}
+            and rent_type is not null
+        </where>
+        limit #{page},3
+    </select>
+</mapper>

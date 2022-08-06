@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kyrie.study.mapper.DetailMapper">
+
+    <select id="selectDetailsById" resultType="com.kyrie.study.pojo.Product">
+        select id,title,price,rent_type rentType, house_type houseType
+        from lzj_product
+        where id=#{id}
+    </select>
+    <select id="queryInfoById" resultType="com.kyrie.study.pojo.Info">
+        select id,years,style,type,level,orientation
+        from lzj_info
+        where product_id=#{id}
+    </select>
+    <select id="queryImagsById" resultType="com.kyrie.study.pojo.Image">
+        select id,url from lzj_product_image
+        where product_id=#{id}
+    </select>
+</mapper>

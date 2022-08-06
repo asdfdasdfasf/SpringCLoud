@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kyrie.study.mapper.BannerMapper">
+
+  <!--查询录播图信息-->
+  <select id="selectBannerList" resultType="com.kyrie.study.pojo.Banner">
+        select id,url from lzj_banner;
+  </select>
+</mapper>

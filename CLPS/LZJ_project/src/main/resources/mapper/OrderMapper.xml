@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kyrie.study.mapper.OrderMapper">
+
+    <select id="selectOrderByName" resultType="com.kyrie.study.pojo.ProductUser">
+        select id,username,product_id,comment_state from lzj_product_user where username=#{username}
+    </select>
+    <select id="selectByProductId" resultType="com.kyrie.study.pojo.Product">
+        select id,title,house_type houseType ,price,rent_type rentType,img from lzj_product where id=#{productId}
+    </select>
+
+</mapper>

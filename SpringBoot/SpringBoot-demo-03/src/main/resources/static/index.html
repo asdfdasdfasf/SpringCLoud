@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>你好我是SpringBoot</h1>
+  <form action="/user" method="get">
+      <input type="text" name="username">
+      <input type="submit" value="get请求方式">
+  </form>
+  <form action="/user" method="post">
+      <input type="text" name="username">
+      <input type="submit" value="post请求方式">
+  </form>
+  <form action="/user" method="post">
+      <input type="hidden" name="_method" value="PUT">
+      <input type="text" name="username">
+      <input type="submit" value="put请求方式">
+  </form>
+  <form action="/user" method="post">
+      <input type="hidden"  name="_method" value="DELETE">
+      <input type="text" name="username">
+      <input type="submit" value="delete请求方式">
+  </form>
+</body>
+</html>
