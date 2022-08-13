@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Feb 20 15:16:09 CST 2022
+annotations-java5-23.0.0.jar>nexus-aliyun=
+annotations-java5-23.0.0.pom>central=
+annotations-java5-23.0.0.pom>nexus-aliyun=
+annotations-java5-23.0.0.jar>central=

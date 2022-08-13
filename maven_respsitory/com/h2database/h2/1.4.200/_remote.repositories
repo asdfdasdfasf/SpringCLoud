@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Jan 05 11:40:02 CST 2022
+h2-1.4.200.jar>nexus-aliyun=
+h2-1.4.200.pom>nexus-aliyun=

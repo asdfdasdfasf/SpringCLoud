@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Apr 06 09:55:01 CST 2022
+kafka-clients-3.0.1.jar>nexus-aliyun=
+kafka-clients-3.0.1.pom>nexus-aliyun=
+kafka-clients-3.0.1-test.jar>nexus-aliyun=

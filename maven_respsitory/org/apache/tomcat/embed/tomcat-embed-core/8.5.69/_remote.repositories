@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 11 19:37:16 CST 2022
+tomcat-embed-core-8.5.69.pom>nexus-aliyun=
+tomcat-embed-core-8.5.69.jar>nexus-aliyun=

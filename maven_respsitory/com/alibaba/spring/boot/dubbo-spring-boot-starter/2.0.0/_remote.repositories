@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Jan 12 09:40:47 CST 2022
+dubbo-spring-boot-starter-2.0.0.jar>central=
+dubbo-spring-boot-starter-2.0.0.pom>nexus-aliyun=
+dubbo-spring-boot-starter-2.0.0.jar>nexus-aliyun=
+dubbo-spring-boot-starter-2.0.0.pom>central=

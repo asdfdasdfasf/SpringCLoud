@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Jan 16 15:42:45 CST 2022
+commons-collections-3.2.pom>central=
+commons-collections-3.2.pom>nexus-aliyun=
+commons-collections-3.2.jar>nexus-aliyun=

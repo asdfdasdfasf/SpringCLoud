@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Jan 22 12:16:00 CST 2022
+bcprov-jdk15on-1.64.jar>nexus-aliyun=
+bcprov-jdk15on-1.64.pom>nexus-aliyun=

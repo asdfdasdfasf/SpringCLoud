@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Jan 12 09:50:13 CST 2022
+zkclient-0.10.pom>central=
+zkclient-0.10.jar>nexus-aliyun=
+zkclient-0.10.pom>nexus-aliyun=
+zkclient-0.10.jar>central=

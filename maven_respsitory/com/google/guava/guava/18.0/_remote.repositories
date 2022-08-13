@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu May 19 14:18:17 CST 2022
+guava-18.0.pom>central=
+guava-18.0.pom>nexus-aliyun=
+guava-18.0.jar>nexus-aliyun=
+guava-18.0.jar>central=

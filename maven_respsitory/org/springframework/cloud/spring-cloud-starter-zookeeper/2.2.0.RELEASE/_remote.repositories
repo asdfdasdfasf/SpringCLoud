@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue May 03 23:00:30 CST 2022
+spring-cloud-starter-zookeeper-2.2.0.RELEASE.pom>nexus-aliyun=
+spring-cloud-starter-zookeeper-2.2.0.RELEASE.jar>nexus-aliyun=

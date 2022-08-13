@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu May 05 11:32:20 CST 2022
+consul-api-1.4.1.jar>nexus-aliyun=
+consul-api-1.4.1.pom>nexus-aliyun=

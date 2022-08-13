@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Feb 14 11:33:41 CST 2022
+spring-boot-starter-security-2.6.3.jar>nexus-aliyun=
+spring-boot-starter-security-2.6.3.pom>nexus-aliyun=

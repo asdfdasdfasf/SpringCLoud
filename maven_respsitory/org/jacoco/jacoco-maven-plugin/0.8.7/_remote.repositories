@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 11 19:35:24 CST 2022
+jacoco-maven-plugin-0.8.7.pom>nexus-aliyun=
+jacoco-maven-plugin-0.8.7.jar>nexus-aliyun=

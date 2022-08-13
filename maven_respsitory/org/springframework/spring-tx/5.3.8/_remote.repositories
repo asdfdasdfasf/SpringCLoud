@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Mar 24 15:15:37 CST 2022
+spring-tx-5.3.8.pom>nexus-aliyun=
+spring-tx-5.3.8.jar>nexus-aliyun=
+spring-tx-5.3.8.jar>central=
+spring-tx-5.3.8.pom>central=

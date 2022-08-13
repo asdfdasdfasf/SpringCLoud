@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 11 19:37:44 CST 2022
+validation-api-1.1.0.Final.jar>central=
+validation-api-1.1.0.Final.pom>nexus-aliyun=
+validation-api-1.1.0.Final.jar>nexus-aliyun=
+validation-api-1.1.0.Final.pom>central=

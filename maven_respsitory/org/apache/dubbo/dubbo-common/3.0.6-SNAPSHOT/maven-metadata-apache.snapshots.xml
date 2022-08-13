@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>org.apache.dubbo</groupId>
+  <artifactId>dubbo-common</artifactId>
+  <version>3.0.6-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20220111.111625</timestamp>
+      <buildNumber>22</buildNumber>
+    </snapshot>
+    <lastUpdated>20220111111625</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>3.0.6-20220111.111625-22</value>
+        <updated>20220111111625</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>3.0.6-20220111.111625-22</value>
+        <updated>20220111111625</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>sources</classifier>
+        <extension>jar</extension>
+        <value>3.0.6-20220111.111625-22</value>
+        <updated>20220111111625</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>javadoc</classifier>
+        <extension>jar</extension>
+        <value>3.0.6-20220111.111625-22</value>
+        <updated>20220111111625</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
